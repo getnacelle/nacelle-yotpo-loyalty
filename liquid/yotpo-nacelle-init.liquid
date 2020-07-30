@@ -1,7 +1,7 @@
 {% comment %}
-  Swell <> Nacelle Integration
+  Yotpo <> Nacelle Integration
   ---
-  Stores logged in customer data needed for Swell Widget in cookies.
+  Stores logged in customer data needed for Yotpo Widget in cookies.
   Include snippet in layout/theme.liquid above closing body tag.
 {% endcomment %}
 {% if customer %}
@@ -16,12 +16,12 @@
       document.cookie = name + "=" + (value || "")  + expires + "; path=/";
     }
     if (document.cookie) {
-      var swellUser = {
+      var yotpoUser = {
         customerId: {{ customer.id }},
         customerEmail: '{{ customer.email }}',
         customerTags: {{ customer.tags | json }}
       };
-      setCookie('nacelle_swell_user', btoa(JSON.stringify(swellUser)), 30)
+      setCookie('nacelle_yotpo_user', btoa(JSON.stringify(yotpoUser)), 30)
     }
   </script>
 {% endif %}

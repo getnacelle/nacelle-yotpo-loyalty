@@ -5,7 +5,7 @@
     <site-footer />
     <event-dispatcher />
     <error-modal/>
-    <swell-widget />
+    <yotpo-widget />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 {
-  "name": "@nacelle/nacelle-swell-nuxt-module",
+  "name": "@nacelle/nacelle-yotpo-loyalty",
   "version": "0.0.1",
-  "description": "Integrates Swell into your Nacelle Nuxt project",
+  "description": "Integrates Yotpo loyalty & referrals into your Nacelle Nuxt project",
   "license": "MIT",
   "contributors": [
     {
@@ -9,7 +9,7 @@
     }
   ],
   "main": "lib/module.js",
-  "repository": "https://github.com/getnacelle/nacelle-swell-nuxt-module",
+  "repository": "https://github.com/getnacelle/nacelle-yotpo-loyalty",
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint --ext .js,.vue example lib test",
