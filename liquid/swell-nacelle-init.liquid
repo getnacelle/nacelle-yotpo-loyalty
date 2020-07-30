@@ -1,0 +1,27 @@
+{% comment %}
+  Swell <> Nacelle Integration
+  ---
+  Stores logged in customer data needed for Swell Widget in cookies.
+  Include snippet in layout/theme.liquid above closing body tag.
+{% endcomment %}
+{% if customer %}
+  <script>
+    function setCookie(name,value,days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+    if (document.cookie) {
+      var swellUser = {
+        customerId: {{ customer.id }},
+        customerEmail: '{{ customer.email }}',
+        customerTags: {{ customer.tags | json }}
+      };
+      setCookie('nacelle_swell_user', btoa(JSON.stringify(swellUser)), 30)
+    }
+  </script>
+{% endif %}
