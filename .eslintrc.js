@@ -1,14 +1,14 @@
 module.exports = {
-  root: true,
-  env: { 'es6': true },
-  parserOptions: {
-    parser: 'babel-eslint',
-    sourceType: 'module'
+  env: {
+    browser: true,
+    es2020: true,
+    node: true,
   },
-  extends: [
-    '@nuxtjs'
-  ],
-  rules: {
-    'arrow-parens': 0
-  }
-}
+  extends: ["eslint:recommended", "plugin:shopify/esnext"],
+  parserOptions: {
+    ecmaVersion: 11,
+    sourceType: "module",
+  },
+  plugins: ["vue", "ejs"],
+  rules: {},
+};

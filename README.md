@@ -1,39 +1,52 @@
 # nacelle-yotpo-loyalty
 
-Adds Vue.js components for integrating [yotpo](https://www.yotpo.com/platform/loyalty/) loyalty and referrals in your [Nacelle](https://getnacelle.com/) Nuxt project.
+Adds Vue.js components for integrating [Yotpo](https://www.yotpo.com/platform/loyalty/) loyalty and referrals in your [Nacelle](https://getnacelle.com/) Nuxt project.
 
 ## Requirements
 
-- A Nacelle project set up locally. See https://docs.getnacelle.com for getting started.
+- A Nacelle project set up locally. To get started, refer to [the Nacelle docs](https://docs.getnacelle.com).
 - A Yotpo app installed and setup on your Shopify store.
 
 ## Setup
 
-### Add Module to Nacelle
+### Install
 
-Once you hace Nacelle and Yotpo set up you can install this module in your project from `npm`:
+Once you have Nacelle and Yotpo set up you can install this module in your project from `npm`:
 
 ```
 npm install @nacelle/nacelle-yotpo-loyalty --save
 ```
 
-After the package has installed, open `nuxt.config.js`. Under `modules` add `@nacelle/nacelle-yotpo-loyalty` to the array. It should look something like this:
+### `.env`
+
+Next, add your Yotpo GUID to your environment variables `.env` file.
+[![Yotpo](yotpo_settings_guide.png)](./yotpo_settings_guide.png)
 
 ```
+# .env
+
+YOTPO_GUID=xxxxxxxxxxxxx
+```
+
+### `nuxt.config.js`
+
+In the `modules` block of `nuxt.config.js`, add `@nacelle/nacelle-yotpo-loyalty` to the array:
+
+```javascript
 modules: [
-  '@nuxtjs/pwa',
-  '@nuxtjs/dotenv',
-  '@nacelle/nacelle-nuxt-module',
-  '@nuxtjs/sitemap',
+  // ...other modules,
   '@nacelle/nacelle-yotpo-loyalty'
 ],
 ```
 
-Then add your Yotpo GUID to your environment variables `.env` file.
-[![Yotpo](yotpo_settings_guide.png)](./yotpo_settings_guid.png)
+Also in `nuxt.config.js`, add the environment variable to the `nacelle` block:
 
-```
-YOTPO_GUID=xxxxxxxxxxxxx
+```javascript
+// nuxt.config.js
+nacelle: {
+  // ...other Nacelle config
+  yotpoGUID: process.env.YOTPO_GUID
+},
 ```
 
 ### Add the components to your Nacelle Storefront

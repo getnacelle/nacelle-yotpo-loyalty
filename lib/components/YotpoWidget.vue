@@ -5,8 +5,8 @@
         id="yotpo-customer-identification"
         data-authenticated="true"
         v-bind="customerData"
-        style="display:none;"
-      ></div>
+        :style="{ display: 'none' }"
+      />
     </client-only>
   </div>
 </template>

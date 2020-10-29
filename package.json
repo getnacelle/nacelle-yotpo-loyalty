@@ -2,7 +2,7 @@
   "name": "@nacelle/nacelle-yotpo-loyalty",
   "version": "0.0.1",
   "description": "Integrates Yotpo loyalty & referrals into your Nacelle Nuxt project",
-  "license": "MIT",
+  "license": "ISC",
   "contributors": [
     {
       "name": "Nacelle"
@@ -10,6 +10,16 @@
   ],
   "main": "lib/module.js",
   "repository": "https://github.com/getnacelle/nacelle-yotpo-loyalty",
+  "keywords": [
+    "Nacelle",
+    "Yotpo",
+    "Nuxt",
+    "eCommerce",
+    "e-commerce",
+    "Shopify",
+    "loyalty",
+    "rewards"
+  ],
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint --ext .js,.vue example lib test",
@@ -22,26 +32,8 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
-    "@nacelle/eslint-config-nacelle": "^1.0.9",
-    "@nuxtjs/eslint-config": "^1.0.1",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.7.2",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jest": "^23.1.1",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-vue": "^6.0.1"
+    "eslint": "^6.8.0",
+    "prettier": "^2.1.2"
   },
-  "dependencies": {
-    "fs": "0.0.1-security",
-    "nuxt": "^2.10.2",
-    "path": "^0.12.7"
-  },
-  "eslintConfig": {
-    "extends": [
-      "nacelle"
-    ]
-  }
+  "dependencies": {}
 }
