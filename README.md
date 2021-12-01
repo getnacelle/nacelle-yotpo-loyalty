@@ -1,4 +1,7 @@
-# nacelle-yotpo-loyalty
+# [DEPRECATED]
+
+This package is deprecated. To integrate a third party script with your Nuxt project, follow our docs here: https://docs.getnacelle.com/nuxt/external-scripts.html
+# Nacelle Yotpo Loyalty
 
 Adds Vue.js components for integrating [Yotpo](https://www.yotpo.com/platform/loyalty/) loyalty and referrals in your [Nacelle](https://getnacelle.com/) Nuxt project.
 
