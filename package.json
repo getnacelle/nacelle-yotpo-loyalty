@@ -1,6 +1,6 @@
 {
   "name": "@nacelle/nacelle-yotpo-loyalty",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Integrates Yotpo loyalty & referrals into your Nacelle Nuxt project",
   "license": "ISC",
   "contributors": [
@@ -23,7 +23,7 @@
   "scripts": {
     "dev": "nuxt example",
     "lint": "eslint --ext .js,.vue example lib test",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "release": "yarn test && standard-version && git push --follow-tags && npm publish"
   },
   "files": [
@@ -33,7 +33,7 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "eslint": "^6.8.0",
+    "jest": "^27.4.3",
     "prettier": "^2.1.2"
-  },
-  "dependencies": {}
+  }
 }
